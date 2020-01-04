@@ -15,7 +15,7 @@
 ## Block
 Use a pair of ` ``` `. <br>
 You can specify the language after the first ` ``` `. For emxample: <br>
-cpp
+`cpp`
 ```cpp
 #include <iostream>
 
@@ -26,7 +26,7 @@ int main() {
   return 0;
 }
 ```
-java
+`java`
 ``` java
 public class HelloWorld {
   public static void main(String[] args) {
