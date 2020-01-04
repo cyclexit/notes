@@ -96,8 +96,7 @@ Grammar
 |1|item1
 |2|item2
 ```
-Effect
-
+Effect <br>
 |Number|Item
 |------|----
 |1|item1
