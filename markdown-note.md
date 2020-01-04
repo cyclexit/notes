@@ -2,7 +2,7 @@
 
 ## Index
 * [Font style](#Font-Style)
-* [Code Block](#Code-Block)
+* [Block](#Block)
 
 ## Font Style
 |Grammar|Effect
