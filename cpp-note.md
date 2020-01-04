@@ -39,6 +39,31 @@ The type `T` should be comparable. <br>
   In this example, the top element of `pq` is an `Edge` object with the max `w` value. If you change `w < other.w` to `w > other.w`, then the top element of `pq` is an `Edge` object with the min `w` value.
 
 ### tuple
+header file: <tuple>
+class template: `template <class... Types> class tuple;`
+***
+A tuple can have many elements with different types.
+1. Create a tuple
+```cpp
+tuple<int, char> foo(10, 'x');
+tuple<int, char> bar = make_tuple(10, 'x');
+```
+2. Access and modify elements in a tuple
+```cpp
+#include <tuple>
+#inculde <iostream>
+
+using namespace std;
+
+int main() {
+  tuple<int, char> foo(10, 'x');
+  cout << get<0>(foo) << " ";
+  get<0>(foo) = 20;
+  cout << get<0>(foo) << '\n';
+  return 0;
+}
+// Output: 10 20
+```
 
 ## Function
 
