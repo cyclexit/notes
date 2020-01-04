@@ -103,6 +103,8 @@ Effect
 |1|item1
 |2|item2
 
+Make sure that the line before the first line of the list is empty. Otherwise, you can not get a list on GitHub.
+
 ## Block
 Use a pair of ` ``` `. <br>
 You can specify the language after the first ` ``` `. For emxample: <br>
