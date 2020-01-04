@@ -74,8 +74,8 @@ This method can only generate random integers inside `int` range.
 ```cpp
 srand((unsigned)time(NULL));
 rand() % (b - a) + a; // Generate the integers between [a,b)
-rand() % (b - a + 1) + a // Generate the integers between [a, b]
-rand() % (b - a) + a + 1 // Generate the integers between (a, b]
+rand() % (b - a + 1) + a; // Generate the integers between [a, b]
+rand() % (b - a) + a + 1; // Generate the integers between (a, b]
 ```
 
 ### String casting
