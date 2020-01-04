@@ -2,11 +2,14 @@
 
 ## Index
 * [Anchor](#Anchor)
-* [Font style](#Font-Style)
+* [Title](#Title)
+* [Font style](#Font-style)
+* [Dividing line](#Dividing-line)
 * [List](#List)
-  * [Bullet](#Bullet)
-    * [Single layer](#Single-layer)
-    * [Multiple layer](#Multiple-layer)
+  * [Single layer bullet list](#Single-layer-bullet-list)
+  * [Multi-layer bullet list](#Multi-layer-bullet-list)
+  * [Single layer number list](#Single-layer-number-list)
+  * [Multi-layer number list](#Multi-layer-number-list)
 * [Table](#Table)
 * [Block](#Block)
 
@@ -15,7 +18,10 @@
 |-------|------
 |`[Back to the top](#Markdown-Note)`|[Back to the top](#Markdown-Note)
 
-## Font Style
+## Title
+Use `#`. You can use up to 6 `#` to get 6-level titles.
+
+## Font style
 |Grammar|Effect
 |-------|------
 |\*italic\*|*italic*
@@ -23,9 +29,11 @@
 |\~\~strike\~\~|~~strike~~
 |\`highlight\`|`hightlight`
 
+## Dividing line
+Use `***` or `___`.
+
 ## List
-### Bullet
-#### Single layer
+### Single layer bullet list
 Grammar
 ```
 * item1
@@ -34,20 +42,51 @@ Grammar
 Effect
 * item1
 * item2
-#### Multiple layer
-Just use the indentation to seperate different layers. <br>
+### Multi-layer bullet list
+Just use the indentation to seperate different layers.
+******************************************************
 Grammar
 ```
 * item1
-  * item1_1
+    * item1_1
 * item2
-  * item2_1
+    * item2_1
 ```
 Effect
 * item1
-  * item1_1
+    * item1_1
 * item2
-  * item2_1
+    * item2_1
+### Single layer number list
+Just type `1. ` which is a number, a dot and a space right after the dot.
+*************************************************************************
+Grammar
+```
+1. item1
+2. item2
+```
+Effect
+1. item1
+2. item2
+### Multi-layer number list
+The same as the bullet list, just use the indentation.
+******************************************************
+Grammar
+```
+1. item1
+    1. item1_1
+        1. item1_1_1
+2. item2
+    1. item2_1
+        1. item2_1_1
+```
+Effect
+1. item1
+    1. item1_1
+        1. item1_1_1
+2. item2
+    1. item2_1
+        1. item2_1_1
 
 ## Table
 Grammar
