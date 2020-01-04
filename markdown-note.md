@@ -28,6 +28,8 @@ Use `#`. You can use up to 6 `#` to get 6-level titles.
 |\*\*bold\*\*|**bold**
 |\~\~strike\~\~|~~strike~~
 |\`highlight\`|`hightlight`
+|H\<sub\>2\<\/sub\>O|H<sub>2</sub>O
+|2\<sup\>18\<\/sup\>|2<sup>18</sup>
 
 ## Dividing line
 Use `***` or `___`.
