@@ -7,6 +7,8 @@
 * [Function](#Function)
   * [Randomization](#Randomization)
   * [String casting](#String-casting)
+* [Other](#Other)
+  * [C++ pre-defined max and min value](#C++-pre-defined-max-and-min-value)
 
 ## Container
 
@@ -99,3 +101,13 @@ rand() % (b - a) + a + 1; // Generate the integers between (a, b]
   string s = "0.0"
   stod(s);
   ```
+
+## Other
+
+### C++ pre-defined max and min value
+header file: `<climits>`
+***
+| type | max | min
+|------|-----|----
+|int|INT_MAX: 32767(2<sup>15</sup> - 1)|INT_MIN:-32767(-2<sup>15</sup> + 1)
+|long long|LLONG_MAX: 9.2e18(2<sup>63</sup> - 1)|LLONG_MIN: -9.2e18(-2<sup>63</sup> + 1)
