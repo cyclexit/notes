@@ -97,6 +97,7 @@ Grammar
 |2|item2
 ```
 Effect
+
 |Number|Item
 |------|----
 |1|item1
