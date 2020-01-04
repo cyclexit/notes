@@ -51,7 +51,7 @@ tuple<int, char> bar = make_tuple(10, 'x');
 2. Access and modify elements in a tuple
 ```cpp
 #include <tuple>
-#inculde <iostream>
+#include <iostream>
 
 using namespace std;
 
