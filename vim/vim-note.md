@@ -1,9 +1,8 @@
 # Vim Note
 
 ## Index
-* [Delete](#Delete)
-
 * [Cursor](#Cursor)
+* [Delete](#Delete)
 
 ## Cursor
 * Move the cursor to the line
