@@ -3,6 +3,12 @@
 ## Index
 * [Delete](#Delete)
 
+* [Cursor](#Cursor)
+
+## Cursor
+* Move the cursor to the line
+  Assuming that you want to move the cursor to the first line, type `:1`.
+
 ## Delete
 * Delete one line 
   1. Move the cursor to the line and enter `dd`.
