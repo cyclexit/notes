@@ -21,7 +21,7 @@
 ## Hyperlink
 |Grammar|Effect
 |-------|------
-|`[GitHub](github.com)`|[GitHub](https://github.com)
+|`[GitHub](https://github.com)`|[GitHub](https://github.com)
 
 ## Title
 Use `#`. You can use up to 6 `#` to get 6-level titles.
