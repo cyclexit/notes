@@ -18,6 +18,11 @@
 |-------|------
 |`[Back to the top](#Markdown-Note)`|[Back to the top](#Markdown-Note)
 
+## Hyperlink
+|Grammar|Effect
+|-------|------
+|`[GitHub](github.com)`|[GitHub](github.com)
+
 ## Title
 Use `#`. You can use up to 6 `#` to get 6-level titles.
 
