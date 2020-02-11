@@ -1,5 +1,12 @@
 # Kubuntu Note
 
+## Software List
+* Visual Studio Code(with the `Settings Sync` plug-in)
+* Vim
+* Android Studio
+* Chromium
+* IBus Panel
+
 ## Index
 * [From Win10 to Kubuntu](#From-Win10-to-Kubuntu)
 * [Consistency of the Wallpaper](#Consistency-of-the-Wallpaper)
