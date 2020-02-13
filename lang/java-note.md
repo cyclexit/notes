@@ -2,6 +2,7 @@
 
 ## Index
 * [Read files](#Read-files)
+* [Write files](#Write-files)
 
 ## Read files
 ```java
@@ -15,6 +16,19 @@ try {
     myReader.close();
 } catch (FileNotFoundException e) {
     System.out.println("File not found.");
+    e.printStackTrace();
+}
+```
+
+## Write files
+```java
+try {
+    String fileName = "example.txt"
+    BufferedWriter bWriter = new BufferedWriter(new FileWriter(fileName));
+    bWriter.write("example");
+    bWriter.close();
+} catch (IOException e) {
+    System.out.println("Output Exception.");
     e.printStackTrace();
 }
 ```
