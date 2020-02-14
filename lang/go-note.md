@@ -11,3 +11,23 @@ Go `install` do a little more. It move the executable file to `$GOPATH/bin` and 
 
 ## Visual Studio Code
 In `setting.json`, set the `go.gopath`.
+
+## Read files
+```go
+file, err := os.Open("example.txt")
+defer file.Close()
+if err != nil {
+  panic(err)
+}
+scanner := bufio.NewScanner(file)
+for scanner.Scan() {
+  info := scanner.Text()
+}
+if scanner.Err() != nil {
+  panic(scanner.Err())
+}
+```
+
+## Get command-line arguments
+`os.Args[0]` is the path of the executable file.</br>
+`os.Args[1]` is the first argument you add in the command line.
