@@ -3,7 +3,7 @@
 ## Index
 * [Config multiple git accounts(based on SSH key)](#config-multiple-git-accounts)
 
-## 1. Config multiple git accounts(based on SSH keys)
+## Config multiple git accounts(based on SSH keys)
 
 ### (1) Generate multiple SSH keys
 ```
@@ -54,3 +54,7 @@ git remote rm origin
 git remote add origin git@host:repository
 ```
 Here `host` is the value of Host in the config file, and `repository` is the name of your repository.
+
+## Git command
+1. Stash untracked files
+`git stash save --keep-index --include-untracked`
