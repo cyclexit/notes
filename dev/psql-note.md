@@ -27,3 +27,8 @@
     ```sql
     UPDATE TABLE table_name SET attr=... where ...
     ```
+* Change data type of an attribute
+    ```sql
+    ALTER TABLE table_name
+    ALTER COLUMN column_name [SET DATA] TYPE new_data_type;
+    ```
