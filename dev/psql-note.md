@@ -10,12 +10,22 @@
 * `\d+ table`: show the detailed information of the table
 * `\conninfo`: see the connect infomation
 
+## Postgresql Keyword
+* `ON UPDATE CASCADE` </br>
+  `ON DELETE CASCADE` </br>
+  This is used when declaring the foreign keys.
+  *CASCADE* means that when delete/update happens in the referenced table, the corresponding tuple in the current relation will also be deleted/updated automatically.
+
 ## Postgresql Query
-* Add foreign keys
+* Drop a constraint
+    ```sql
+    ALTER TABLE table_name DROP CONSTRAINT constraint_name;
+    ```
+* Add a foreign key
     ```sql
     ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY(a1) REFERENCES parent_table(b1);
     ```
-* Add unique constraints
+* Add a unique constraint
     ```sql
     ALTER TABLE login ADD CONSTRAINT constraint_name UNIQUE(r);
     ```
@@ -25,7 +35,7 @@
     ```
 * Change the value of an attribute to a table
     ```sql
-    UPDATE TABLE table_name SET attr=... where ...
+    UPDATE table_name SET attr=... where ...
     ```
 * Change data type of an attribute
     ```sql
