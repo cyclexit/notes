@@ -30,3 +30,6 @@ Open bash and find `Settings` in the status bar.
 
 ## Configure Mouse Action
 Configure Desktop -> Mouse Action
+
+## Shorten the path shown in the terminal
+Change the `\w` in `PS1` to `\W`.
