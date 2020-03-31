@@ -1,17 +1,17 @@
 # Markdown Note
 
 ## Index
-* [Anchor](#Anchor)
-* [Title](#Title)
-* [Font style](#Font-style)
-* [Dividing line](#Dividing-line)
-* [List](#List)
-  * [Single layer bullet list](#Single-layer-bullet-list)
-  * [Multi-layer bullet list](#Multi-layer-bullet-list)
-  * [Single layer number list](#Single-layer-number-list)
-  * [Multi-layer number list](#Multi-layer-number-list)
-* [Table](#Table)
-* [Block](#Block)
+* [Anchor](#anchor)
+* [Title](#title)
+* [Font style](#font-style)
+* [Dividing line](#dividing-line)
+* [List](#list)
+  * [Single layer bullet list](#single-layer-bullet-list)
+  * [Multi-layer bullet list](#multi-layer-bullet-list)
+  * [Single layer number list](#single-layer-number-list)
+  * [Multi-layer number list](#multi-layer-number-list)
+* [Table](#table)
+* [Block](#block)
 
 ## Anchor
 |Grammar|Effect
@@ -37,7 +37,8 @@ Use `#`. You can use up to 6 `#` to get 6-level titles.
 |2\<sup\>18\<\/sup\>|2<sup>18</sup>
 
 ## Dividing line
-Use `***` or `___`.
+Use `***` or `___`. </br>
+`<hr>` also works.
 
 ## List
 ### Single layer bullet list
