@@ -1,17 +1,16 @@
 # C++ Note
 
 ## Index
-* [Container](#Container)
+* [Container](#container)
   * [priority_queue](#priority_queue)
   * [tuple](#tuple)
-* [Function](#Function)
-  * [Randomization](#Randomization)
-  * [String casting](#String-casting)
-* [Other](#Other)
-  * [C++ pre-defined max and min value](#C++-pre-defined-max-and-min-value)
+* [Function](#function)
+  * [Randomization](#randomization)
+  * [String casting](#string-casting)
+* [Other](#other)
+  * [C++ pre-defined max and min value](#c++-pre-defined-max-and-min-value)
 
 ## Container
-
 ### priority_queue
 header file: `<queue>` <br>
 class template: `template <class T, class Container = vector<T>, class Compare = less<typename Container::value_type> > class priority_queue;` <br>
@@ -39,7 +38,6 @@ The type `T` should be comparable. <br>
     ```
     If we want to create a priority queue with a customized class. The class needs to override the `<` operator. <br>
     In this example, the top element of `pq` is an `Edge` object with the max `w` value. If you change `w < other.w` to `w > other.w`, then the top element of `pq` is an `Edge` object with the min `w` value.
-
 ### tuple
 header file: <tuple>
 class template: `template <class... Types> class tuple;`
@@ -68,7 +66,6 @@ A tuple can have many elements with different types.
   ```
 
 ## Function
-
 ### Randomization
 header file: `<random>` <br>
 ***
@@ -103,7 +100,6 @@ rand() % (b - a) + a + 1; // Generate the integers between (a, b]
   ```
 
 ## Other
-
 ### C++ pre-defined max and min value
 header file: `<climits>`
 ***
@@ -111,3 +107,6 @@ header file: `<climits>`
 |------|-----|----
 |int|INT_MAX: 32767(2<sup>15</sup> - 1)|INT_MIN:-32767(-2<sup>15</sup> + 1)
 |long long|LLONG_MAX: 9.2e18(2<sup>63</sup> - 1)|LLONG_MIN: -9.2e18(-2<sup>63</sup> + 1)
+
+## Memo
+* C++ is a strongly typed, weakly checked programming language.
