@@ -4,11 +4,15 @@
 * [Container](#container)
   * [priority_queue](#priority_queue)
   * [tuple](#tuple)
-* [Function](#function)
-  * [Randomization](#randomization)
+* [Snippet](#snippet)
   * [String casting](#string-casting)
+  * [Randomization](#randomization)
+  * [Overload << for a class](#overload-<<-for-a-class)
 * [Other](#other)
   * [C++ pre-defined max and min value](#c++-pre-defined-max-and-min-value)
+* [Memo](#memo)
+
+*** 
 
 ## Container
 ### priority_queue
@@ -65,7 +69,16 @@ A tuple can have many elements with different types.
   // Output: 10 20
   ```
 
-## Function
+
+## Snippet
+### String casting
+```cpp
+// int, double to string 
+to_string(x);
+// string to int
+stoi(s);
+stod(s);
+```
 ### Randomization
 header file: `<random>` <br>
 ***
@@ -76,28 +89,12 @@ rand() % (b - a) + a; // Generate the integers between [a,b)
 rand() % (b - a + 1) + a; // Generate the integers between [a, b]
 rand() % (b - a) + a + 1; // Generate the integers between (a, b]
 ```
-
-### String casting
-* int -> string 
-  ```cpp 
-  int x = 0;
-  to_string(x);
-  ```
-  string -> int
-  ```cpp
-  string s = "0";
-  stoi(s);
-  ```
-* double -> string
-  ```cpp
-  double x = 0.0;
-  to_string(x);
-  ```
-  string -> double
-  ```cpp
-  string s = "0.0"
-  stod(s);
-  ```
+### Overload << for a class
+```cpp
+ostream& operator<<(ostream& out, T& t) {
+  out << "\n"; // move content to out stream
+}
+```
 
 ## Other
 ### C++ pre-defined max and min value
