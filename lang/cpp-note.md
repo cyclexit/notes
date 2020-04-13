@@ -42,8 +42,13 @@ The type `T` should be comparable. <br>
     ```
     If we want to create a priority queue with a customized class. The class needs to override the `<` operator. <br>
     In this example, the top element of `pq` is an `Edge` object with the max `w` value. If you change `w < other.w` to `w > other.w`, then the top element of `pq` is an `Edge` object with the min `w` value.
+### map
+header file: `<map>`
+class template: `template<class Key, class T, class Compare = less<Key>, class Alloc = allocator<pair<const Key,T>>> class map;`
+***
+I often use the map to store the original indexes before sorting an array. However, when the elements in an array **may have the same value**, please **DON'T USE THIS**, since it will bring bugs which are really hard to find. In this case, just consider using `pair<...>`, `<tuple>` or `array`.
 ### tuple
-header file: <tuple>
+header file: `<tuple>` </br>
 class template: `template <class... Types> class tuple;`
 ***
 A tuple can have many elements with different types.
@@ -68,7 +73,11 @@ A tuple can have many elements with different types.
   }
   // Output: 10 20
   ```
-
+### array
+header file: `<array>`(C++11) </br>
+class template: `template < class T, size_t N > class array;`
+***
+This can be used with `vector`. This is a better option when you want to use a tuple to store a set of values **with the same type**, since you can use the index to access each element instead of using `get<...>()` function.
 
 ## Snippet
 ### String casting
