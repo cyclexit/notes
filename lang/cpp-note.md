@@ -9,7 +9,7 @@
 * [Snippet](#snippet)
   * [String casting](#string-casting)
   * [Randomization](#randomization)
-  * [Overload << for a class](#overload-<<-for-a-class)
+  * [Overload << for a class](#overload-\<\<-for-a-class)
 * [Other](#other)
   * [Macro max and min value](#macro-max-and-min-value)
 * [Memo](#memo)
