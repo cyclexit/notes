@@ -19,11 +19,10 @@
 ## Container
 ### priority_queue
 header file: `<queue>` <br>
-class template: `template <class T, class Container = vector<T>, class Compare = less<typename Container::value_type> > class priority_queue;` <br>
-***
+class template: `template <class T, class Container = vector<T>, class Compare = less<typename Container::value_type> > class priority_queue;` </br> </br>
 The type `T` should be comparable. <br>
 * `priority_queue<int> pq` <br>
-  In this situation, `pq` is a `max heap`. That is to say that the top element of `pq` is always the biggest element. <br>
+  In this situation, `pq` is a `max heap`. That is to say that the top element of `pq` is always the biggest element. </br>
   Why? According to the class template above, we know that `less<T>` is the default comparator. When it does the down-heap operation, we swap the current element with its smaller child(if exists) when the current element is `less` than its smaller child.
 * `priority_queue<int, vector<int>, greater<int>> pq` <br>
   In this situation, we use the `greater<T>` as the comparator, so now `pq` is a `min heap`.
@@ -46,13 +45,11 @@ The type `T` should be comparable. <br>
     In this example, the top element of `pq` is an `Edge` object with the max `w` value. If you change `w < other.w` to `w > other.w`, then the top element of `pq` is an `Edge` object with the min `w` value.
 ### map
 header file: `<map>` </br>
-class template: `template<class Key, class T, class Compare = less<Key>, class Alloc = allocator<pair<const Key,T>>> class map;`
-***
+class template: `template<class Key, class T, class Compare = less<Key>, class Alloc = allocator<pair<const Key,T>>> class map;` </br> </br>
 I often use the map to store the original indexes before sorting an array. However, when the elements in an array **may have the same value**, please **DON'T USE THIS**, since it will bring bugs which are really hard to find. In this case, just consider using `pair<...>`, `<tuple>` or `array`.
 ### tuple
 header file: `<tuple>` `C++11`</br>
-class template: `template <class... Types> class tuple;`
-***
+class template: `template <class... Types> class tuple;` </br> </br>
 A tuple can have many elements with different types.
 * Create a tuple
   ```cpp
@@ -77,8 +74,7 @@ A tuple can have many elements with different types.
   ```
 ### array
 header file: `<array>` `C++11` </br>
-class template: `template < class T, size_t N > class array;`
-***
+class template: `template < class T, size_t N > class array;` </br> </br>
 This can be used with `vector`. This is a better option when you want to use a tuple to store a set of values **with the same type**, since you can use the index to access each element instead of using `get<...>()` function.
 
 ## Snippet
