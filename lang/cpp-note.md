@@ -11,7 +11,7 @@
   * [Randomization](#randomization)
   * [Overload << for a class](#overload-<<-for-a-class)
 * [Other](#other)
-  * [C++ pre-defined max and min value](#c++-pre-defined-max-and-min-value)
+  * [Macro max and min value](#macro-max-and-min-value)
 * [Memo](#memo)
 
 *** 
@@ -104,7 +104,7 @@ ostream& operator<<(ostream& out, T& t) {
 ```
 
 ## Other
-### C++ pre-defined max and min value
+### Macro max and min value
 header file: `<climits>`
 ***
 | type | max | min
