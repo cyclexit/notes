@@ -1,6 +1,8 @@
 # C++ Note
 
 ## Index
+* [Class](#class)
+  * [Constructor](#constructor)
 * [Container](#container)
   * [priority_queue](#priority_queue)
   * [map](#map)
@@ -15,6 +17,30 @@
 * [Memo](#memo)
 
 *** 
+
+## Class
+### Constructor
+```cpp
+class Test {
+ private:
+  int a;
+  int& ref_a;
+ public:
+  Test(int num);
+};
+// version 1
+Test::Test(int num) {
+  a = num;
+  ref_a = num; // error will occur here
+}
+// version 2
+Test:Test(int num): a(num), ref_a(num) {}
+```
+In the version 1, inside the constructor's function body, the constructor just assign the values to the class members. The class members are explicitly initialized by the default constructor before the constructor's function body. However, for the reference type, it does not have a default constructor, so it has to be explicitly initialized. This is the reason of the error. </br>
+</br>
+In the version 2, the class members are explicitly initialized in the constructor initializer list, so there is no error. In the initializer list, the order of the initialization only depends on the order of the appearance of each class member in the class. </br>
+</br>
+Tips: develop a habit of using the constructor initializer list! It will avoid mistakes.
 
 ## Container
 ### priority_queue
