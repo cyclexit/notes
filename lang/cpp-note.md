@@ -8,6 +8,7 @@
   * [map](#map)
   * [tuple](#tuple)
   * [array](#array)
+* [Complex](#complex)
 * [Snippet](#snippet)
   * [String casting](#string-casting)
   * [Randomization](#randomization)
@@ -100,8 +101,29 @@ A tuple can have many elements with different types.
   ```
 ### array
 header file: `<array>` `C++11` </br>
-class template: `template < class T, size_t N > class array;` </br> </br>
+class template: `template < class T, size_t N > class array;` </br> 
+</br>
 This can be used with `vector`. This is a better option when you want to use a tuple to store a set of values **with the same type**, since you can use the index to access each element instead of using `get<...>()` function.
+
+## Complex
+header file: `<complex>` </br>
+class template: `template <class T> class complex;` </br>
+</br>
+The complex class is designed to hold two elements of the same type representing a complex number in its Cartesian form. A complex type variable can be used almost like int and double, since many operators are overloaded. However, there are still something that we should pay attention.
+
+```cpp 
+// initialize
+complex<double> num(2.0, 1.0);
+cout << num.real() << " " << num.imag() << '\n'; // Output: 2.0 1.0
+complex<double> x = 2.0;
+cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 0.0
+
+// addition
+num += 2.0;
+cout << num.real() << " " << num.imag() << '\n'; // Output: 4.0 1.0
+x += complex(0.0, 2.0);
+cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 2.0
+```
 
 ## Snippet
 ### String casting
