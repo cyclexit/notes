@@ -4,6 +4,7 @@
 * Visual Studio Code(with the `Settings Sync` plug-in)
 * Android Studio
 * Firefox
+* Opera
 
 ***
 
