@@ -15,6 +15,7 @@
   * [Tweaks](#tweaks)
   * [Lid Close](#lid-close)
 * [Functionality]
+  * [Files Bookmark](#files-bookmark)
   * [Screenshots and Screencasts](#screenshots-and-screencasts)
   * [Clipboard](#clipboard)
 ***
@@ -44,10 +45,12 @@ This also apply to Ubuntu 20.04 LTS.
 
 
 ## Functionality
+### Files Bookmark
+Open `Files`. Toggle the folder icon, and then you can see the the `New bookmark` section on the side bar.
 ### Screenshots and Screencasts
 [https://help.ubuntu.com/stable/ubuntu-help/screen-shot-record.html](https://help.ubuntu.com/stable/ubuntu-help/screen-shot-record.html)
 ### Clipboard
 ```
 sudo apt install CopyQ
 ```
-In `Startup Application`, add `CopyQ`. 
+In `Startup Application`, add `CopyQ`.
