@@ -42,7 +42,12 @@ The settings of this extension can also be accessed in `Tweaks`.
 ### Lid Close
 [How to Change Lid Close Action in Ubuntu 18.04 LTS](https://tipsonubuntu.com/2018/04/28/change-lid-close-action-ubuntu-18-04-lts/) </br>
 This also apply to Ubuntu 20.04 LTS.
-
+### Screen Lock
+* Settings > Blank Screen: Never
+* Settings > Privacy > Screen Lock > Blank Screen Delay: Never
+* Settings > Privacy > Screen Lock > Automatic Screen Lock: disable
+* Settings > Privacy > Screen Lock > Lock Screen on Suspend: disable
+* Settings > Privacy > Screen Lock > Show Notifications on Lock Screen: disable
 
 ## Functionality
 ### Files Bookmark
