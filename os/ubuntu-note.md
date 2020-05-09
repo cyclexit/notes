@@ -14,6 +14,7 @@
   * [Dash to Dock](#dash-to-dock)
   * [Tweaks](#tweaks)
   * [Lid Close](#lid-close)
+  * [Screen Lock](#screen-lock)
 * [Functionality]
   * [Files Bookmark](#files-bookmark)
   * [Screenshots and Screencasts](#screenshots-and-screencasts)
