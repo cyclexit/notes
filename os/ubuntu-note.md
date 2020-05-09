@@ -13,8 +13,10 @@
   * [Chinese Pinyin Input](#chinese-pinyin-input)
   * [Dash to Dock](#dash-to-dock)
   * [Tweaks](#tweaks)
+  * [Lid Close](#lid-close)
 * [Functionality]
-  * [Screenshots and Screencasts]
+  * [Screenshots and Screencasts](#screenshots-and-screencasts)
+  * [Clipboard](#clipboard)
 ***
 
 ## Setup
