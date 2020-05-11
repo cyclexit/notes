@@ -1,7 +1,7 @@
 # Python Note
 
 ## Index
-* [Path]
+* [Path](#path)
   * [Environment variable](#environment)
 * [File](#file)
   * [Read and write file line by line](#read-and-write-file-line-by-line)
