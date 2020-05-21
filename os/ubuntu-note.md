@@ -31,8 +31,10 @@ The settings of this extension can also be accessed in `Tweaks`.
 * Position and size > Position on screen: bottom
 * Position and size > Intelligent autohide
 * Position and size > Icon size limit: 32
+* Appearance > Use built-in theme: enable
 * Behavior > Click action > Minimize
-* Appearance > Opacity > Fixed: 50%
+* Behavior > Click action > Settings > Shift+Click action: Launch new instance
+* Behavior > Click action > Settings > Middle-Click action: Show window previews
 ### Tweaks
 * Extensions > Dash to dock: enable
 * Extensions > Desktop icons: disable
