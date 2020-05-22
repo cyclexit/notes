@@ -19,6 +19,7 @@
   * [Files Bookmark](#files-bookmark)
   * [Screenshots and Screencasts](#screenshots-and-screencasts)
   * [Clipboard](#clipboard)
+  * [Default Command Line Editor]()
 ***
 
 ## Setup
@@ -62,3 +63,8 @@ Open `Files`. Toggle the folder icon, and then you can see the the `New bookmark
 sudo apt install CopyQ
 ```
 In `Startup Application`, add `CopyQ`.
+### Default Command Line Editor
+Switch default command line editor:
+```bash
+sudo update-alternatives --config editor
+```
