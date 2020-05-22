@@ -3,6 +3,7 @@
 ## Index
 * [Config multiple git accounts(based on SSH key)](#config-multiple-git-accounts)
 * [Squash commits into one](squash-commits-into-one)
+* [Merge](#merge)
 * [Git command](#git-command)
 
 ## Config multiple git accounts(based on SSH keys)
@@ -55,6 +56,11 @@
 ## Squash commits into one
 [https://www.internalpointers.com/post/squash-commits-into-one-git](https://www.internalpointers.com/post/squash-commits-into-one-git) </br>
 Push to the remote repo: `git push origin +branch-name`. ([the difference between --force and +](https://git-scm.com/docs/git-push#Documentation/git-push.txt---force)) 
+
+## Merge
+* Create a merge commit: there will be a merge commit.
+* Squash and merge(Good): the merge commit will be squashed.
+* Rebase and merge
 
 ## Git command
 1. Stash untracked files
