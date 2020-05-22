@@ -55,7 +55,7 @@
 
 ## Squash commits into one
 [https://www.internalpointers.com/post/squash-commits-into-one-git](https://www.internalpointers.com/post/squash-commits-into-one-git) </br>
-Push to the remote repo: `git push origin +branch-name`. ([the difference between --force and +](https://git-scm.com/docs/git-push#Documentation/git-push.txt---force)) 
+Push to the remote repo: `git push origin +<branch-name>`. ([the difference between --force and +](https://git-scm.com/docs/git-push#Documentation/git-push.txt---force)) 
 
 ## Merge
 * Create a merge commit: there will be a merge commit.
@@ -64,6 +64,37 @@ Push to the remote repo: `git push origin +branch-name`. ([the difference betwee
 
 ## Git command
 1. Stash untracked files
-`git stash save --keep-index --include-untracked`
+    ```
+    git stash save --keep-index --include-untracked
+    ```
 2. Commit with long messages
-`git commit -a`
+    ```
+    git commit -a
+    ```
+3. Branch Operations
+    * See the branch info
+        ```
+        git branch
+        ```
+    * Switch to a branch
+        ```
+        git checkout <branch-name>
+        ```
+    * Create a branch
+        ```
+        # based on current checked-out branch
+        git branch <new-branch>
+        # based on a chosen branch
+        git branch <new-branch> <base-branch>
+        # based on a specific commit
+        git branch <new-branch> <commit-number>
+
+        ```
+    * Delete a branch
+        ```
+        # locally
+        git branch -d <branch-name>
+        git branch -D <branch-name> # forced
+        # remotely
+        git push origin --delete <branch-name>
+        ```
