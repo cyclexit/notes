@@ -9,6 +9,9 @@
   * [tuple](#tuple)
   * [array](#array)
 * [Complex](#complex)
+* [Memory](#memory)
+  * [Memory Type and Object Life Cycle](#memory-type-and-object-life-cycle)
+  * [Dynamic Memory and Smart Pointer](#dynamic-memory-and-smart-pointer)
 * [Snippet](#snippet)
   * [String casting](#string-casting)
   * [Randomization](#randomization)
@@ -124,6 +127,51 @@ cout << num.real() << " " << num.imag() << '\n'; // Output: 4.0 1.0
 x += complex(0.0, 2.0);
 cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 2.0
 ```
+
+## Memory
+### Memory Type and Object Life Cycle
+* **Static Memory** </br>
+  This is used for: </br>
+    1. local static objects
+    2. class static data members
+    3. global variables </br>
+    Static objects are allocated before they are used, and they are destroyed when the program ends.
+* **Stack Memory** </br>
+  This is used for non-static objects defined inside functions. </br>
+  Stack objects exist only when the block where they are defined is executing.
+* **Heap(Free Store)** </br>
+  Program use the heap for objects that they dynamically allocate--that is, for objects that the program allocates at run time. </br>
+  Program controls the life time of dynamic objects; our code must explicitly destroy such objects when they are no longer needed.
+### Dynamic Memory and Smart Pointer
+* **Keyword** </br>
+  `new`: allocate, optionally initialize an object in dynamic memory and returns a pointer to that object. </br>
+  `delete`: take a pointer to a dynamic object, destroy that object, and free the associated memory.
+* **Smart Pointer** </br>
+  header filer: `<memory>`
+  * `shared_ptr`: allow multiple pointers to refer to the same object </br>
+    `weak ptr`: this is a weak reference to an object managed by a `shared_ptr`
+  * `unique_ptr`: "own" the object to which it points </br>
+  Tips: A default initialized smart pointer holds a null pointer.
+
+  **Common Operations for shared_ptr and unique_ptr**
+  |Operation|Description
+  |---------|-----------
+  |shared_ptr\<T\> sp </br> unique_ptr\<T\> up| Null smart pointer can point to objects of type **T**.
+  |p| Use *p* as a condition; `true` if *p* ponits to an object.
+  |*p|Dereference p.
+  |p->mem|Synonym for (*p).mem.
+  |p.get()|Return the pointer in *p*. Use with caution!
+  |swap(p, q) </br> p.swap(q)|Swap the pointers in *p* and *q*.
+
+  **Special Operations for shared_ptr**
+  |Operation|Description
+  |---------|-----------
+  |make_shared<T>(args)|Return a `shared_ptr` pointeing to a dynamically allocated object of type **T**. Use args to initialize that object.
+  |p.use_count()|Return the number of objects sharing with *p*. This may be a slow operation, intended primarily or debuggin purposes.
+  |p.unique()|Return `true` if `p.use_count()` is 1; `false` otherwise.
+  |shared_ptr<T> p(q)|*p* is a copy of the `shared_ptr` *q*; increments the count in *q*. The pointer in *q* must be convertible to **T\***
+  |p = q|*p* and *q* are `shared_ptr` holding pointers that can be converted to another. Decrement *p*'s reference count and increment *q*'s reference count. Delete *p*'s existing memory if *p*'s count goes to 0.
+
 
 ## Snippet
 ### String casting
