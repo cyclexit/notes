@@ -65,3 +65,5 @@ Push to the remote repo: `git push origin +branch-name`. ([the difference betwee
 ## Git command
 1. Stash untracked files
 `git stash save --keep-index --include-untracked`
+2. Commit with long messages
+`git commit -a`
