@@ -17,6 +17,7 @@
   * [Randomization](#randomization)
   * [Overload << for a class](#overload--for-a-class)
 * [Other](#other)
+  * [final specifier](#final-specifier)
   * [Macro max and min value](#macro-max-and-min-value)
 * [Memo](#memo)
 
@@ -200,6 +201,13 @@ ostream& operator<<(ostream& out, T& t) {
 ```
 
 ## Other
+### final specifier
+* Applied to a member function </br>
+  `final` is placed right after the declarator of a class.
+  When used in a `virtual` function declaration or definition, `final` ensures that the function is `virtual` and specifies that it **may not be overriden** by derived classes.
+* Applied to a class </br>
+  `final` is placed right after the function name. </br>
+  When used in a class definition, `final` specifies that this class may not appear in the `base-specifier-list` of another class definition(in other words, **cannot be derived from**).
 ### Macro max and min value
 header file: `<climits>`
 ***
