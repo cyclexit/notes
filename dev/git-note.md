@@ -84,8 +84,10 @@ Push to the remote repo: `git push origin +<branch-name>`. ([the difference betw
         ```
         # based on current checked-out branch
         git branch <new-branch>
+        
         # based on a chosen branch
         git branch <new-branch> <base-branch>
+        
         # based on a specific commit
         git branch <new-branch> <commit-number>
 
@@ -95,6 +97,17 @@ Push to the remote repo: `git push origin +<branch-name>`. ([the difference betw
         # locally
         git branch -d <branch-name>
         git branch -D <branch-name> # forced
+        
         # remotely
         git push origin --delete <branch-name>
         ```
+4. cherry-pick
+    ```git
+    git cherry-pick <commit>
+    
+    # let you edit the commit message prior to committing
+    git cherry-pick -e <commit>
+    
+    # append a line saying "(cherry picked from commit …​)" to the original commit message
+    git cherry-pick -x <commit>
+    ```
