@@ -19,7 +19,8 @@
   * [Files Bookmark](#files-bookmark)
   * [Screenshots and Screencasts](#screenshots-and-screencasts)
   * [Clipboard](#clipboard)
-  * [Default Command Line Editor]()
+  * [Default Command Line Editor](#default-command-line-editor)
+  * [Show git branch name in the command line](#show-git-branch-name-in-the-command-line)
 ***
 
 ## Setup
@@ -68,3 +69,29 @@ Switch default command line editor:
 ```bash
 sudo update-alternatives --config editor
 ```
+### Show git branch name in the command line
+1. Open a terminal
+    ```bash
+    gedit ~/.bashrc
+    ```
+2. Find the following snippet
+    ```bashrc
+    if [ "$color_prompt" = yes ]; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    else
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    fi
+    ```
+3. Replace the snippet above
+    ```bashrc
+    # git branch info if present
+    parse_git_branch() {
+        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)  /(\1)/'
+    }
+    
+    if [ "$color_prompt" = yes ]; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]  \u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]$  (parse_git_branch)\[\033[00m\]\$ '
+    else
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$  (parse_git_branch)\$ '
+    fi
+    ```
