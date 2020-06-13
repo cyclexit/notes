@@ -17,8 +17,8 @@
   * [Randomization](#randomization)
   * [Overload << for a class](#overload--for-a-class)
 * [Other](#other)
+  * [Overload and Override](#overload-and-override)
   * [complex](#complex)
-  * [final specifier](#final-specifier)
   * [Macro max and min value](#macro-max-and-min-value)
 * [Memo](#memo)
 
@@ -54,6 +54,14 @@ Tips: develop a habit of using the constructor initializer list! It will avoid m
 Polymorphism means "many forms" derived from a Greek word. This is one of the key ideas of the Object Oriented Programming(OOP). </br>
 ### Polymorphism Structure </br>
 ![polymorphisom](./picture/polymorphism.png)
+
+### final specifier
+* Applied to a member function </br>
+  `final` is placed right after the function name. </br>
+  When used in a `virtual` function declaration or definition, `final` ensures that the function is `virtual` and specifies that it **may not be overriden** by derived classes.
+* Applied to a class </br>
+  `final` is placed right after the declarator of a class. </br>
+  When used in a class definition, `final` specifies that this class may not appear in the `base-specifier-list` of another class definition(in other words, **cannot be derived from**).
 
 ***
 
@@ -196,6 +204,39 @@ ostream& operator<<(ostream& out, T& t) {
 ***
 
 ## Other
+
+### Overload and Override
+* Overload </br>
+  Overloading occurs when two or more methods in one class have the same method name but different parameters.
+    ```cpp
+    void print(int x) {
+      cout << "You enter an integer: " << x << '\n';
+    }
+
+    void print(string x) {
+      cout << "You enter a string: " << x << '\n';
+    }
+    ```
+* Override </br>
+  A derived class has a member function which has the same function signature with the original function in the base class, but a different function body. The function in the derived class is call an overrided function. The *write* functon in the *RedPen* class is an overrided function.
+  ```cpp
+  class Pen {
+   public:
+    void write() {
+      cout << "Pen" << '\n';
+    } 
+  };
+
+  class RedPen {
+   public:
+    void write() {
+      cout << "Red pen" << '\n';
+    }
+  };
+  ```
+
+
+
 ### complex
 header file: `<complex>` </br>
 class template: `template <class T> class complex;` </br>
@@ -215,13 +256,7 @@ cout << num.real() << " " << num.imag() << '\n'; // Output: 4.0 1.0
 x += complex(0.0, 2.0);
 cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 2.0
 ```
-### final specifier
-* Applied to a member function </br>
-  `final` is placed right after the declarator of a class.
-  When used in a `virtual` function declaration or definition, `final` ensures that the function is `virtual` and specifies that it **may not be overriden** by derived classes.
-* Applied to a class </br>
-  `final` is placed right after the function name. </br>
-  When used in a class definition, `final` specifies that this class may not appear in the `base-specifier-list` of another class definition(in other words, **cannot be derived from**).
+
 ### Macro max and min value
 header file: `<climits>`
 ***
