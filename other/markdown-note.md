@@ -12,6 +12,7 @@
   * [Multi-layer number list](#multi-layer-number-list)
 * [Table](#table)
 * [Block](#block)
+* [Picture](#picture)
 
 ## Anchor
 |Grammar|Effect
@@ -42,44 +43,44 @@ Use `***` or `___`. </br>
 
 ## List
 ### Single layer bullet list
-Grammar
+**Grammar**
 ```
 * item1
 * item2
 ```
-Effect
+**Effect**
 * item1
 * item2
 ### Multi-layer bullet list
-Just use the indentation to seperate different layers.
-******************************************************
-Grammar
+Just use the indentation to seperate different layers. </br>
+
+**Grammar**
 ```
 * item1
     * item1_1
 * item2
     * item2_1
 ```
-Effect
+**Effect**
 * item1
     * item1_1
 * item2
     * item2_1
 ### Single layer number list
-Just type `1. ` which is a number, a dot and a space right after the dot.
-*************************************************************************
-Grammar
+Just type `1. ` which is a number, a dot and a space right after the dot. </br>
+
+**Grammar**
 ```
 1. item1
 2. item2
 ```
-Effect
+**Effect**
 1. item1
 2. item2
 ### Multi-layer number list
-The same as the bullet list, just use the indentation.
-******************************************************
-Grammar
+The same as the bullet list, just use the indentation. </br>
+
+**Grammar**
 ```
 1. item1
     1. item1_1
@@ -88,7 +89,7 @@ Grammar
     1. item2_1
         1. item2_1_1
 ```
-Effect
+**Effect**
 1. item1
     1. item1_1
         1. item1_1_1
@@ -135,3 +136,10 @@ public class HelloWorld {
   }
 }
 ```
+
+## Picture
+|Grammar|Effect
+|-------|------
+|`![GitHub](https://github.com/fluidicon.png)`|![GitHub](https://github.com/fluidicon.png) 
+
+Inside the parenthesis, you can also put a repo directory as well as a link.
