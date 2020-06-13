@@ -3,12 +3,12 @@
 ## Index
 * [Class](#class)
   * [Constructor](#constructor)
+* [Polymorphism](#polymorphism)
 * [Container](#container)
   * [priority_queue](#priority_queue)
   * [map](#map)
   * [tuple](#tuple)
   * [array](#array)
-* [Complex](#complex)
 * [Memory](#memory)
   * [Memory Type and Object Life Cycle](#memory-type-and-object-life-cycle)
   * [Dynamic Memory and Smart Pointer](#dynamic-memory-and-smart-pointer)
@@ -17,6 +17,7 @@
   * [Randomization](#randomization)
   * [Overload << for a class](#overload--for-a-class)
 * [Other](#other)
+  * [complex](#complex)
   * [final specifier](#final-specifier)
   * [Macro max and min value](#macro-max-and-min-value)
 * [Memo](#memo)
@@ -46,6 +47,15 @@ In the version 1, inside the constructor's function body, the constructor just a
 In the version 2, the class members are explicitly initialized in the constructor initializer list, so there is no error. In the initializer list, the order of the initialization only depends on the order of the appearance of each class member in the class. </br>
 </br>
 Tips: develop a habit of using the constructor initializer list! It will avoid mistakes.
+
+***
+
+## Polymorphism
+Polymorphism means "many forms" derived from a Greek word. This is one of the key ideas of the Object Oriented Programming(OOP). </br>
+### Polymorphism Structure </br>
+![polymorphisom](./picture/polymorphism.png)
+
+***
 
 ## Container
 ### priority_queue
@@ -109,25 +119,7 @@ class template: `template < class T, size_t N > class array;` </br>
 </br>
 This can be used with `vector`. This is a better option when you want to use a tuple to store a set of values **with the same type**, since you can use the index to access each element instead of using `get<...>()` function.
 
-## Complex
-header file: `<complex>` </br>
-class template: `template <class T> class complex;` </br>
-</br>
-The complex class is designed to hold two elements of the same type representing a complex number in its Cartesian form. A complex type variable can be used almost like int and double, since many operators are overloaded. However, there are still something that we should pay attention.
-
-```cpp 
-// initialize
-complex<double> num(2.0, 1.0);
-cout << num.real() << " " << num.imag() << '\n'; // Output: 2.0 1.0
-complex<double> x = 2.0;
-cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 0.0
-
-// addition
-num += 2.0;
-cout << num.real() << " " << num.imag() << '\n'; // Output: 4.0 1.0
-x += complex(0.0, 2.0);
-cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 2.0
-```
+***
 
 ## Memory
 ### Memory Type and Object Life Cycle
@@ -173,6 +165,7 @@ cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 2.0
   |shared_ptr<T> p(q)|*p* is a copy of the `shared_ptr` *q*; increments the count in *q*. The pointer in *q* must be convertible to **T\***
   |p = q|*p* and *q* are `shared_ptr` holding pointers that can be converted to another. Decrement *p*'s reference count and increment *q*'s reference count. Delete *p*'s existing memory if *p*'s count goes to 0.
 
+***
 
 ## Snippet
 ### String casting
@@ -200,7 +193,28 @@ ostream& operator<<(ostream& out, T& t) {
 }
 ```
 
+***
+
 ## Other
+### complex
+header file: `<complex>` </br>
+class template: `template <class T> class complex;` </br>
+</br>
+The complex class is designed to hold two elements of the same type representing a complex number in its Cartesian form. A complex type variable can be used almost like int and double, since many operators are overloaded. However, there are still something that we should pay attention.
+
+```cpp 
+// initialize
+complex<double> num(2.0, 1.0);
+cout << num.real() << " " << num.imag() << '\n'; // Output: 2.0 1.0
+complex<double> x = 2.0;
+cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 0.0
+
+// addition
+num += 2.0;
+cout << num.real() << " " << num.imag() << '\n'; // Output: 4.0 1.0
+x += complex(0.0, 2.0);
+cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 2.0
+```
 ### final specifier
 * Applied to a member function </br>
   `final` is placed right after the declarator of a class.
@@ -215,6 +229,8 @@ header file: `<climits>`
 |------|-----|----
 |int|INT_MAX: 32767(2<sup>15</sup> - 1)|INT_MIN:-32767(-2<sup>15</sup> + 1)
 |long long|LLONG_MAX: 9.2e18(2<sup>63</sup> - 1)|LLONG_MIN: -9.2e18(-2<sup>63</sup> + 1)
+
+***
 
 ## Memo
 * C++ is a strongly typed, weakly checked programming language.
