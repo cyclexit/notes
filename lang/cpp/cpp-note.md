@@ -12,13 +12,15 @@
 * [Memory](#memory)
   * [Memory Type and Object Life Cycle](#memory-type-and-object-life-cycle)
   * [Dynamic Memory and Smart Pointer](#dynamic-memory-and-smart-pointer)
+* [Header](#header)
+  * [complex](#complex)
 * [Snippet](#snippet)
   * [String casting](#string-casting)
   * [Randomization](#randomization)
   * [Overload << for a class](#overload--for-a-class)
 * [Other](#other)
   * [Overload and Override](#overload-and-override)
-  * [complex](#complex)
+  * [Pointer](#pointer)
   * [Macro max and min value](#macro-max-and-min-value)
 * [Memo](#memo)
 
@@ -175,6 +177,31 @@ This can be used with `vector`. This is a better option when you want to use a t
 
 ***
 
+## Header
+Here are some headers which I learn to use.
+### complex
+header file: `<complex>` </br>
+class template: `template <class T> class complex;` </br>
+</br>
+The complex class is designed to hold two elements of the same type representing a complex number in its Cartesian form. A complex type variable can be used almost like int and double, since many operators are overloaded. However, there are still something that we should pay attention.
+
+```cpp 
+// initialize
+complex<double> num(2.0, 1.0);
+cout << num.real() << " " << num.imag() << '\n'; // Output: 2.0 1.0
+complex<double> x = 2.0;
+cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 0.0
+
+// addition
+num += 2.0;
+cout << num.real() << " " << num.imag() << '\n'; // Output: 4.0 1.0
+x += complex(0.0, 2.0);
+cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 2.0
+```
+
+
+***
+
 ## Snippet
 ### String casting
 ```cpp
@@ -235,27 +262,64 @@ ostream& operator<<(ostream& out, T& t) {
   };
   ```
 
+### Pointer
+* In C++, the size of a pointer **ONLY** depends on the machine.
+  * In a 32-bit machine, the pointer size will be 4 bytes(32 bits). 
+  * In a 64-bit machine, the pointer size will be 8 bytes(64 bits).
+  ```cpp
+  #include <iostream>
 
+  using namespace std;
 
-### complex
-header file: `<complex>` </br>
-class template: `template <class T> class complex;` </br>
-</br>
-The complex class is designed to hold two elements of the same type representing a complex number in its Cartesian form. A complex type variable can be used almost like int and double, since many operators are overloaded. However, there are still something that we should pay attention.
+  int main() {
+    int num = 10;
+    int* iptr = &num;
+    char ch = 'A';
+    char* chptr = &ch;
+    // sizeof keyword returns the number of bytes of an object or type
+    cout << sizeof(iptr) << " " << sizeof(chptr) << '\n'
+    return 0;
+  }
+  // Result: 8 8
+  ```
+* Pointer is also passed by value.
+  ```cpp
+  #include <iostream>
 
-```cpp 
-// initialize
-complex<double> num(2.0, 1.0);
-cout << num.real() << " " << num.imag() << '\n'; // Output: 2.0 1.0
-complex<double> x = 2.0;
-cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 0.0
+  using namespace std;
 
-// addition
-num += 2.0;
-cout << num.real() << " " << num.imag() << '\n'; // Output: 4.0 1.0
-x += complex(0.0, 2.0);
-cout << x.real() << " " << x.imag() << '\n'; // Output: 2.0 2.0
-```
+  void foo(int* ptr) {
+    cout << &ptr << '\n';
+  }
+
+  int main() {
+    int num = 10;
+    int* ptr = &num;
+    cout << &ptr << '\n';
+    foo(ptr);
+    return 0;
+  }
+  ```
+  Running the example above, we can know that the address of two pointers is different. They just have the same address value stored inside. </br>
+  As a result, in the following code, *ptr* in the main function will still be nullptr.
+  ```cpp
+  #include <iostream>
+
+  using namespace std;
+
+  void foo(int* ptr) {
+    ptr = new int[1];
+    ptr[0] = 1;
+  }
+
+  int main() {
+    int* ptr = nullptr;
+    foo(ptr);
+    cout << (ptr == nullptr ? "still nullptr" : "not nullptr") << '\n';
+    return 0;
+  }
+  ```
+  In all, do not try to new an object in a function and use it outside that function.
 
 ### Macro max and min value
 header file: `<climits>`
