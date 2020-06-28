@@ -1,9 +1,14 @@
 # C++ Note
 
 ## Index
-* [Class](#class)
-  * [Constructor](#constructor)
-* [Polymorphism](#polymorphism)
+* [OOP](#oop)
+  * [Class](#class)
+    * [Constructor](#constructor)
+  * [Polymorphism](#polymorphism)
+    * [Polymorphism Structure](#polymorphism-structure)
+    * [Virtual Function](#virtual-function)
+      * [Pure Virtual Function and Abstract Class](#pure-virtual-function-and-abstract-class)
+      * [Virtual Destructor](#virtual-destructor)
 * [Container](#container)
   * [priority_queue](#priority_queue)
   * [map](#map)
@@ -26,8 +31,13 @@
 
 *** 
 
-## Class
-### Constructor
+## OOP
+OOP is the initials of the object-oriented programming. The three key ideas of OOP are:
+* **data abstraction**: separate the interface from implementation 
+* **inheritance**: model the relationships among similar types
+* **dynamic binding**: improve the flexibility
+### Class
+#### Constructor
 ```cpp
 class Test {
  private:
@@ -50,14 +60,33 @@ In the version 2, the class members are explicitly initialized in the constructo
 </br>
 Tips: develop a habit of using the constructor initializer list! It will avoid mistakes.
 
-***
 
-## Polymorphism
-Polymorphism means "many forms" derived from a Greek word. This is one of the key ideas of the Object Oriented Programming(OOP). </br>
-### Polymorphism Structure </br>
+### Polymorphism
+Polymorphism means "many forms" derived from a Greek word. This is one of the key ideas of the Object Oriented Programming(OOP). This is achieved by static(early) binding and dynamic(late) binding in C++. </br>
+#### Polymorphism Structure
 ![polymorphisom](./picture/polymorphism.png)
+#### Virtual Function
+Link: [GeeksforGeeks: Virtual Function in C++](https://www.geeksforgeeks.org/virtual-function-cpp/) </br>
+Virtual functions ensure that the correct function is called for an object, regardless of the type of reference (or pointer) used for function call. </br>
+Tips about virtual functions:
+  * Virtual functions cannot be `static` and also cannot be a `friend` function of another class.
+  * Virtual functions should be accessed using pointer or reference of base class type to achieve run time polymorphism.
+  * Virtual functions are not required to be overriden in the derived classes.
+##### Pure Virtual Function and Abstract Class
+```cpp
+class MyClass{
+ public:
+  virtual foo() = 0;
+};
+```
+The function *foo* is a pure virtual function(abstract functio) in *MyClass*. In this case, *MyClass* becomes an abstract class. </br>
+Tips about abstract classes:
+* Abstract classes cannot be instantiated.
+* A derived class will also be an abstract class if it does not redefine all pure virtual functions in the base class.
+##### Virtual Destructor
+A class should have a virtual destructor if it has a virtual function. This is to make sure that when the program delete a derived class using a pointer to the base class, the derived class can be deleted properly.
 
-### final specifier
+##### final specifier
 * Applied to a member function </br>
   `final` is placed right after the function name. </br>
   When used in a `virtual` function declaration or definition, `final` ensures that the function is `virtual` and specifies that it **may not be overriden** by derived classes.
@@ -280,7 +309,6 @@ ostream& operator<<(ostream& out, T& t) {
     cout << sizeof(iptr) << " " << sizeof(chptr) << '\n'
     return 0;
   }
-  // Result: 8 8
   ```
 * Pointer is also passed by value.
   ```cpp
