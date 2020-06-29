@@ -95,3 +95,9 @@ sudo update-alternatives --config editor
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$  (parse_git_branch)\$ '
     fi
     ```
+### Solaar
+Install this one to interact with Logitech Unify Receiver.
+```bash
+sudo apt-get install solaar
+```
+Logout and login again. Probably you need to re-plug in the receiver.
