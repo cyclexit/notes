@@ -7,7 +7,12 @@
 * Windows Terminal
 * Microsoft Edge
 
-## Index
+***
 
+## Index
+* [Windows Terminal]
 
 ***
+
+## Windows Terminal
+* Profile Settings: https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings
