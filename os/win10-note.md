@@ -10,9 +10,13 @@
 ***
 
 ## Index
-* [Windows Terminal]
+* [Windows Terminal](#windows-terminal)
+* [Hot Keys](#hot-keys)
 
 ***
 
 ## Windows Terminal
 * Profile Settings: https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings
+
+## Hot Keys
+`Windows key + Shift + S`: Activate the snipping tool
