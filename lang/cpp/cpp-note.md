@@ -361,3 +361,10 @@ header file: `<climits>`
 
 ## Memo
 * C++ is a strongly typed, weakly checked programming language.
+* When the loop variable is used as the index, it's better to name it as something that can represent the meaning of it. </br>
+  For example:
+    ```cpp
+    for (int len = 1; len < n; ++len) {
+      ...
+    }
+    ```
