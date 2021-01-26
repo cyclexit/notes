@@ -1,11 +1,22 @@
 # Bash Note
 
 ## Index
+* [printf vs echo](#printf-vs-echo)
+* [Redirect Output to Multiple Files](#redirect-output-to-multiple-files)
 * [Variable](#variable)
 * [Command-line Argument](#command-line-argument)
 * [String](#String)
 
 ***
+
+## printf vs echo
+`prinf` has much more consistent behavior than `echo` since `echo` has multiple versions.
+
+## Redirect Output to Multiple Files
+Use `tee`:
+```bash
+printf "Hello" | tee {1..10}.txt
+```
 
 ## Variable
 * Create variable </br>
