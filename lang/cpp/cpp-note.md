@@ -368,3 +368,4 @@ header file: `<climits>`
       ...
     }
     ```
+* `std::string` is comparable with the lexical order.
